@@ -44,18 +44,17 @@ public class LogicScript : MonoBehaviour
         }
     }
 
-    public void startGame()
+    /*(public void startGame()
     {
         gameIsOver = false;
         gameIsStarted = true;
-        startGameScreen.SetActive(false);
-        scoreCounter.SetActive(true);
+        SceneManager.LoadScene("GameScene");
 
-    }
+    }*/
+
     public void restartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        startGame();
     }
 
     

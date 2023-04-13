@@ -17,14 +17,14 @@ public class PipeSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnPipe();
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (logic.gameIsStarted)
-        {
+
             if (timer < spawnRate)
             {
                 timer += Time.deltaTime;
@@ -34,12 +34,8 @@ public class PipeSpawner : MonoBehaviour
                 timer = 0;
                 spawnPipe();
             }
-            if (!gameStarted)
-            {
-                spawnPipe();
-                gameStarted = true;
-            }
-        }
+            
+        
     }
 
     void spawnPipe()

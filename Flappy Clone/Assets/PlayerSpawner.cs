@@ -18,10 +18,6 @@ public class PlayerSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!gameStarted && logic.gameIsStarted)
-        {
-            Instantiate(player, new Vector3(transform.position.x, transform.position.y), transform.rotation);
-            gameStarted = true;
-        }
+
     }
 }

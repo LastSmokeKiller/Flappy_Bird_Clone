@@ -24,7 +24,7 @@ public class flap_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && alive && logic.gameIsStarted)
+        if (Input.GetKeyDown(KeyCode.Space) && alive)
         {
             moveup();
         }
