@@ -16,15 +16,21 @@ public class LogicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public bool gameIsOver = true;
 
+
     [Header("Sounds")]
     public AudioSource scoreSound;
     public AudioSource gameoverSound;
+    public AudioSource flap;
 
-    [Header("Start Game")]
+   /* [Header("Start Game")]
     public GameObject startGameScreen;
-    public bool gameIsStarted = false;
+    public bool gameIsStarted = false; */
 
-    
+    [Header("Music")]
+    public AudioSource music;
+
+  
+
 
     [ContextMenu("Increase Score")]
     public void addScore(int i)
@@ -41,16 +47,17 @@ public class LogicScript : MonoBehaviour
             gameOverScreen.SetActive(true);
             gameIsOver = true;
             gameoverSound.Play();
+            music.Stop();
+            scoreCounter.SetActive(false);
         }
     }
 
-    /*(public void startGame()
+    public void MainMenuLoad()
     {
-        gameIsOver = false;
-        gameIsStarted = true;
-        SceneManager.LoadScene("GameScene");
 
-    }*/
+        SceneManager.LoadScene("MainMenuScene");
+
+    }
 
     public void restartGame()
     {

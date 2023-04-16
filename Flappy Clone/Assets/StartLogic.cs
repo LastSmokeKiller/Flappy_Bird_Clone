@@ -12,4 +12,9 @@ public class StartLogic : MonoBehaviour
         SceneManager.LoadScene("GameScene");
 
     }
+
+    public void exitGame()
+    {
+        Application.Quit();
+    }
 }
