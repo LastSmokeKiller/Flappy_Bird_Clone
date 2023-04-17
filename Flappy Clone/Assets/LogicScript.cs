@@ -29,6 +29,9 @@ public class LogicScript : MonoBehaviour
     [Header("Music")]
     public AudioSource music;
 
+    [Header("Particles")]
+    public ParticleSystem particle;
+
   
 
 
@@ -49,6 +52,8 @@ public class LogicScript : MonoBehaviour
             gameoverSound.Play();
             music.Stop();
             scoreCounter.SetActive(false);
+            
+            particle.Pause();
         }
     }
 
