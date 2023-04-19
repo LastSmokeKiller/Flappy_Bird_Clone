@@ -15,8 +15,12 @@ public class flap_script : MonoBehaviour
 
     private bool alive = true;
 
+    private float timer = 0;
+    private bool flapping = false;
+
     [Header("Flapper Sound")]
     public AudioSource flap;
+    public Animator animatior;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,7 @@ public class flap_script : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && alive)
         {
             moveup();
+            
         }
     }
 
@@ -46,5 +51,10 @@ public class flap_script : MonoBehaviour
     {
         myRigidbody.velocity = Vector2.up  * speed;
         flap.Play();
+        animatior.Play("Flapping");
+        timer = 0;
+        
+        
+
     }
 }
